@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microbiology Physiology - BioChem Data</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b1a24; 
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: #00e5ff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            transition: color 0.2s ease;
+            align-self: flex-start;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .back-btn:hover {
+            color: #ffffff;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 10px 0;
+            color: #00e5ff; 
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .category-btn {
+            background-color: #132d3e;
+            border: 1px solid #1e4560;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #ffffff;
+            cursor: pointer;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+        .category-btn:hover {
+            background-color: #1a3e56;
+            border-color: #00e5ff;
+        }
+
+        .content-panel {
+            display: none;
+            background-color: #08131a;
+            border: 1px dashed #1e4560;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: -5px;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .course-part {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .course-title {
+            font-size: 1.1rem;
+            color: #ffd54f; 
+            margin: 0 0 10px 0;
+            font-weight: bold;
+            border-bottom: 1px solid rgba(255, 213, 79, 0.2);
+            padding-bottom: 5px;
+        }
+
+        .sub-section-title {
+            font-size: 0.95rem;
+            color: #00e5ff;
+            margin: 8px 0 5px 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .files-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .file-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .file-name {
+            font-size: 1rem;
+            color: #e0e0e0;
+            font-weight: 500;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+
+        .action-btn {
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+            text-align: center;
+            flex: 1;
+            max-width: 100px;
+        }
+
+        .view-btn {
+            background-color: transparent;
+            color: #00e5ff;
+            border: 1px solid #00e5ff;
+        }
+
+        .view-btn:hover {
+            background-color: rgba(0, 229, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .down-btn {
+            background-color: #00e5ff;
+            color: #0b1a24;
+            border: 1px solid #00e5ff;
+        }
+
+        .down-btn:hover {
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="second-year.html" class="back-btn">← Second Year</a>
+
+    <header>
+        <h1>🧫 Microbiology Physiology</h1>
+    </header>
+
+    <div class="main-container">
+
+        <button class="category-btn" onclick="togglePanel('fungi-panel')">🍄 Fungi Course</button>
+        <div id="fungi-panel" class="content-panel">
+            
+            <div class="course-part">
+                <div class="sub-section-title">📚 Lectures (النظري)</div>
+                <div class="files-list">
+                    <div class="file-item">
+                        <span class="file-name">📄 Fungi Lecture 1</span>
+                        <div class="btn-group">
+                            <a href="fungi-lec1.pdf" class="action-btn view-btn" target="_blank">View</a>
+                            <a href="fungi-lec1.pdf" class="action-btn down-btn" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section-title">🔬 Practical (العملي)</div>
+                <div class="files-list">
+                    <div class="file-item">
+                        <span class="file-name">🧪 Fungi Lab 1</span>
+                        <div class="btn-group">
+                            <a href="fungi-lab1.pdf" class="action-btn view-btn" target="_blank">View</a>
+                            <a href="fungi-lab1.pdf" class="action-btn down-btn" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section-title">📝 Questions & Answers (الأسئلة والحل)</div>
+                <div class="files-list">
+                    <div class="file-item">
+                        <span class="file-name">✅ Fungi Questions with Answers</span>
+                        <div class="btn-group">
+                            <a href="fungi-questions.pdf" class="action-btn view-btn" target="_blank">View</a>
+                            <a href="fungi-questions.pdf" class="action-btn down-btn" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="category-btn" onclick="togglePanel('bacteria-panel')">🧫 Bacteria Course</button>
+        <div id="bacteria-panel" class="content-panel">
+            
+            <div class="course-part">
+                <div class="sub-section-title">📚 Lectures (النظري)</div>
+                <div class="files-list">
+                    <div class="file-item">
+                        <span class="file-name">📄 Bacteria Lecture 1</span>
+                        <div class="btn-group">
+                            <a href="bacteria-lec1.pdf" class="action-btn view-btn" target="_blank">View</a>
+                            <a href="bacteria-lec1.pdf" class="action-btn down-btn" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section-title">🔬 Practical (العملي)</div>
+                <div class="files-list">
+                    <div class="file-item">
+                        <span class="file-name">🧪 Bacteria Lab 1</span>
+                        <div class="btn-group">
+                            <a href="bacteria-lab1.pdf" class="action-btn view-btn" target="_blank">View</a>
+                            <a href="bacteria-lab1.pdf" class="action-btn down-btn" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="category-btn" onclick="togglePanel('virus-panel')">🧬 Virus Course</button>
+        <div id="virus-panel" class="content-panel">
+            
+            <div class="course-part">
+                <div class="sub-section-title">📚 Lectures (النظري)</div>
+                <div class="files-list">
+                    <div class="file-item">
+                        <span class="file-name">📄 Virus Lecture 1</span>
+                        <div class="btn-group">
+                            <a href="virus-lec1.pdf" class="action-btn view-btn" target="_blank">View</a>
+                            <a href="virus-lec1.pdf" class="action-btn down-btn" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section-title">🔬 Practical (العملي)</div>
+                <div class="files-list">
+                    <div class="file-item">
+                        <span class="file-name">🧪 Virus Lab 1</span>
+                        <div class="btn-group">
+                            <a href="virus-lab1.pdf" class="action-btn view-btn" target="_blank">View</a>
+                            <a href="virus-lab1.pdf" class="action-btn down-btn" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function togglePanel(panelId) {
+            var panel = document.getElementById(panelId);
+            if (panel.style.display === "flex") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "flex";
+            }
+        }
+    </script>
+
+</body>
+</html>
